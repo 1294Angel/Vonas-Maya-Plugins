@@ -4,11 +4,26 @@ from maya import cmds
 import webbrowser
 
 """------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"""
-from pizzaops import fireawaypizza
+#Importing required definitions from python files
+
+from pizzaops import fireawaypizza # 01
+from scriptrunner import runscriptfile #02
+from scriptrunner import checkandaddfilepath #03
+
+"""------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"""
+#Setting Up Button Commands
+
+
+def fireawaypizza_button_01():
+    fireawaypizza()
+def runscriptfile_button_02():
+    runscriptfile()
+def checkandaddfilepath_button_03():
+    checkandaddfilepath()
+
 
 
 """------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"""
-
 
 window_ID = 'Vona_Tools'
 
@@ -20,8 +35,10 @@ cmds.window(window_ID)
 
 #Contents of the window
 cmds.rowColumnLayout()
-cmds.button(label='Fireaway Pizza', command=fireawaypizza())
-cmds.button()
+cmds.button(label='Fireaway Pizza',align='center', command="fireawaypizza_button_01()")
+cmds.button(label='Run Custom Script', command="runscriptfile_button_02()")
+cmds.button(label='Setup Python Script Folder', command="checkandaddfilepath_button_03()")
+
 
 cmds.showWindow(window_ID)
 
