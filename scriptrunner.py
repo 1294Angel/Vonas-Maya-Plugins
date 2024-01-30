@@ -17,7 +17,7 @@ def collectfilepath():
     #Setting as global variable
     return(userinput_filepath)
 
-def checkandaddfilepath():
+def checkandaddfilepath(userinput_filepath):
     #Checking whether or not the filepath is already in pythons directories --- To avoid putting a TON of the same filepath in -- Allows this to be used as a double check as well
     filepath_to_check = collectfilepath()
     if filepath_to_check not in sys.path:
@@ -46,7 +46,7 @@ def runscriptfile():
 
 """------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"""
 #Actual Running Script
-
+"""
 print("\n-\n-\n-\n-\n-\n-")
 
 question_addfile = str(input("Would you like to add a file directory? (y/n)\n"))
@@ -63,6 +63,6 @@ if question_runscript != "y":
     print("No Script Needs Running \n")
 else:
     runscriptfile()
-
+"""
 #J:/Vonas Maya Scripts/Vonas-Maya-Plugins/
 #VonTool_1
